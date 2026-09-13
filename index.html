@@ -12,6 +12,8 @@
       <img src="vijlogo.png" alt="vijaya">
     </div>
     <nav class="menu">
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="nav-links" id="navLinks">
       <a href="#home" class="active">HOME</a>
       <a href="#about">ABOUT US</a>
       <a href="#objectives">OBJECTIVES</a>
@@ -187,5 +189,10 @@
   </div>
   <div class="copyright">© 2024 VIJAYA.</div>
 </footer>
+<script>
+function toggleMenu(){
+  document.getElementById("navLinks").classList.toggle("show");
+}
+</script>
 </body>
 </html>

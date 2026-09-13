@@ -660,32 +660,20 @@ footer {
     border-top: 1px solid #333;
     margin-top: 20px;
 }
-/* --- MOBILE FIX --- */
-@media (max-width: 768px) {
-  nav, .navbar, header {
-    flex-direction: column !important;
-    height: auto !important;
-    padding: 10px !important;
-  }
+.hamburger { display: none; font-size: 28px; cursor: pointer; color: white; }
 
-  nav ul, .navbar ul, .nav-links {
-    flex-direction: column !important;
-    width: 100% !important;
-    gap: 5px !important;
+@media (max-width: 900px) {
+  .container-topbar { display: flex; justify-content: space-between; align-items: center; }
+  .hamburger { display: block; }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; right: 0;
+    background: black;
+    width: 200px;
+    z-index: 999;
   }
-
-  nav ul li, .navbar ul li {
-    display: block !important;
-    width: 100% !important;
-    text-align: left !important;
-  }
-
-  .welcome-section, .hero {
-    flex-direction: column !important;
-  }
-
-  img {
-    max-width: 100% !important;
-    height: auto !important;
-  }
+  .nav-links a { padding: 12px 20px; border-bottom: 1px solid #333; }
+  .nav-links.show { display: flex; }
 }
