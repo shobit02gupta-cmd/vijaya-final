@@ -711,4 +711,74 @@ footer {
     object-fit: cover !important;
     border-radius: 12px !important;
   }
+}/* YOUR ABOUT US FIX - Exactly for your HTML */
+#about .page-hero{
+  position: relative;
+  width: 100%;
+  height: 350px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#about .page-hero img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#about .page-hero .hero-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+#about .page-hero h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 48px;
+  z-index: 2;
+}
+
+#about .page-content{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+#about .page-content > div{
+  flex: 1;
+}
+
+#about .page-content img{
+  width: 100%;
+  border-radius: 16px;
+}
+
+/* MOBILE FIX - This will fix the small image */
+@media (max-width: 768px){
+  #about .page-hero{
+    height: 200px !important;
+    border-radius: 16px !important;
+  }
+  #about .page-hero h1{
+    font-size: 32px !important;
+  }
+  #about .page-content{
+    flex-direction: column !important;
+  }
+  #about .page-content > div{
+    width: 100% !important;
+  }
+  #about .page-content img{
+    height: 250px !important;
+    object-fit: cover !important;
+  }
 }
